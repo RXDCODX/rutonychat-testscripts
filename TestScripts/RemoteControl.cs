@@ -1,28 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace RutonyChat {
-    public static class RemoteControl {
-
+﻿namespace RutonyChat
+{
+    public static class RemoteControl
+    {
         public static bool isActive = false;
 
-        public enum TypeAlert { Follower, Subscriber, Donate, Text, HotKey, Host, NewViewer, RankPromote, Like, Repost, Gift, Raid, Request, TwitchPoints };
-        public enum TypeCondMessage { chance, qty };
+        public enum TypeAlert
+        {
+            Follower,
+            Subscriber,
+            Donate,
+            Text,
+            HotKey,
+            Host,
+            NewViewer,
+            RankPromote,
+            Like,
+            Repost,
+            Gift,
+            Raid,
+            Request,
+            TwitchPoints,
+        };
+
+        public enum TypeCondMessage
+        {
+            chance,
+            qty,
+        };
 
         [Flags]
-        public enum ModifierKeys : uint {
+        public enum ModifierKeys : uint
+        {
             None = 0,
             Alt = 1,
             Control = 2,
             Shift = 4,
-            Win = 8
+            Win = 8,
         }
 
-        public class RemotePreset {
+        public class RemotePreset
+        {
             // ==== conditions ====
             public int IndPreset = 0;
             public bool Active = false;
@@ -38,7 +55,7 @@ namespace RutonyChat {
             public float MaxValue = 0;
 
             // text
-            public bool ConditionText = false;  // флаг, текст
+            public bool ConditionText = false; // флаг, текст
             public bool OnlySubscriber = false;
             public string ChatText = "";
             public TypeCondMessage CondMessage = TypeCondMessage.chance;
@@ -62,29 +79,36 @@ namespace RutonyChat {
             public bool StayPressed = false;
             public ModifierKeys alt = ModifierKeys.None;
             public System.Windows.Forms.Keys Key = System.Windows.Forms.Keys.F1;
+
             // script
             public bool isScript = false;
             public string Script = "";
             public string ScriptArguments = "";
+
             // sound
             public bool isSoundFile = false;
             public string SoundFile = "";
             public int SoundVolume = 100;
+
             // alert
             public bool isAlert = false;
             public string AlertID = "";
             public string AlertName = "";
+
             // counter
             public bool isCounter = false;
             public int CounterAction = 0;
             public int CounterNumber = 0;
+
             // run script
             public bool isRunScript = false;
             public string RunScriptName = "";
             public string RunScriptParams = "";
+
             // run bot command
             public bool isRunBotCommand = false;
             public int IndRunBotCommand = -1;
+
             // timers
             public bool isTimer = false;
             public int TimerOper = 0;
@@ -99,22 +123,46 @@ namespace RutonyChat {
 
         public static List<RemotePreset> ListPresets;
 
-        public static void CheckPresets(RemotePreset preset, string var_nickname = "", string var_text = "", float var_value = 0) { }
+        public static void CheckPresets(
+            RemotePreset preset,
+            string var_nickname = "",
+            string var_text = "",
+            float var_value = 0
+        ) { }
 
-        public static void RunProgram(RemotePreset preset, string var_nickname = "", string var_text = "", float var_value = 0, string var_donor = "") { }
+        public static void RunProgram(
+            RemotePreset preset,
+            string var_nickname = "",
+            string var_text = "",
+            float var_value = 0,
+            string var_donor = ""
+        ) { }
 
         public static void PressKey(RemotePreset preset) { }
+
         public static void PlaySound(RemotePreset preset) { }
 
-        public static void ShowCustomAlert(RemotePreset preset, string var_nick, string var_donate = "", string var_text = "") { }
+        public static void ShowCustomAlert(
+            RemotePreset preset,
+            string var_nick,
+            string var_donate = "",
+            string var_text = ""
+        ) { }
 
         public static void UpdateCounter(int vnumber, int vvalue) { }
 
         public static void RunTimerOper(RemotePreset preset) { }
 
-        public static void RunBotCommand(RemotePreset preset, string var_username, float var_value) { }
+        public static void RunBotCommand(
+            RemotePreset preset,
+            string var_username,
+            float var_value
+        ) { }
 
-        public static void RunScript(RemotePreset preset, string var_username, float var_value = 0) { }
-     
+        public static void RunScript(
+            RemotePreset preset,
+            string var_username,
+            float var_value = 0
+        ) { }
     }
 }

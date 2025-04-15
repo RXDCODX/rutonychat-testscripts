@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
-using System.IO;
-using System.Threading;
-
-namespace RutonyChat {
-    public static class LabelBase {
-
+﻿namespace RutonyChat
+{
+    public static class LabelBase
+    {
         public static bool isTest = false;
 
-        public class CustomLabel {
+        public class CustomLabel
+        {
             private System.Threading.Timer _timer;
             private string _text = "";
             public bool Active = false;
@@ -26,7 +18,8 @@ namespace RutonyChat {
 
         public static List<CustomLabel> ListCustomLabels = new List<CustomLabel>();
 
-        public enum LabelType {
+        public enum LabelType
+        {
             Viewers_Twitch,
             Viewers_Goodgame,
             Viewers_Cybergame,
@@ -119,43 +112,50 @@ namespace RutonyChat {
             Viewers_Mixer,
             Viewers_Wasd,
             Viewers_Steam,
-            Viewers_Trovo
-
+            Viewers_Trovo,
         }
 
-        public class ValueLabel {
+        public class ValueLabel
+        {
             public string Format;
             public Dictionary<string, string> Values = new Dictionary<string, string>();
         }
 
-        public class LabelClass {
-            public string Name;         // имя
-            public string Caption;      // описание
-            public string FileName;     // файл
-            public string Format;       // формат
-            public string BaseFormat;   // базовый формат
-            public LabelType Type;      // тип
+        public class LabelClass
+        {
+            public string Name; // имя
+            public string Caption; // описание
+            public string FileName; // файл
+            public string Format; // формат
+            public string BaseFormat; // базовый формат
+            public LabelType Type; // тип
             public Dictionary<string, string> Params;
             public List<string> ListSites;
-            public override string ToString() {
+
+            public override string ToString()
+            {
                 return "-- " + Caption;
             }
-            public string GetParam(string param, string defvalue) {
+
+            public string GetParam(string param, string defvalue)
+            {
                 string ret = defvalue;
-                try {
+                try
+                {
                     ret = Params[param];
-                } catch {
+                }
+                catch
+                {
                     Params.Add(param, defvalue);
                 }
                 return ret;
             }
 
-            public ValueLabel GetValue(string varSite = null) {
-
+            public ValueLabel GetValue(string varSite = null)
+            {
                 Dictionary<string, string> Values = new Dictionary<string, string>();
 
                 return new ValueLabel() { Format = Format, Values = Values };
-
             }
         }
     }

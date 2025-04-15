@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RutonyChat {
-    public static class ProgramSettings {
-
-        public static class general {
+﻿namespace RutonyChat
+{
+    public static class ProgramSettings
+    {
+        public static class general
+        {
             public static string PrivateMessage = "";
 
             public static bool ShowDiffOnline = false;
@@ -152,7 +147,8 @@ namespace RutonyChat {
             public static int OutputDevice = -1;
         }
 
-        public static class Currency {
+        public static class Currency
+        {
             public static string BaseCurrencyUid = "";
             public static string FormatSum = "G";
             public static string FormatDonate = "$sum $currency";
@@ -160,8 +156,8 @@ namespace RutonyChat {
             public static DateTime LastUpdate = new DateTime(1, 1, 1, 0, 0, 0);
         }
 
-        public static class songrequest {
-
+        public static class songrequest
+        {
             public static int CurrentDevice = 0;
 
             public static string Keywords = "!sr,!songrequest";
@@ -212,15 +208,16 @@ namespace RutonyChat {
             public static bool SongMaxRate = false;
             public static int SongMaxRate_Value = 30;
             public static string SongMaxRate_Error = ""; // ProgramLang.SR_SongMaxRate_Error;
-
         }
 
-        public static class quize {
+        public static class quize
+        {
             public static string word = "";
             public static string question = "";
         }
 
-        public static class twitch {
+        public static class twitch
+        {
             public static bool Active = false;
             public static string Channel = "";
             public static bool ColorNick = true;
@@ -258,7 +255,8 @@ namespace RutonyChat {
             public static string TwitchPointsWTextChatFormat = ""; // ProgramLang.TextTwitchPointsWithText;
         }
 
-        public static class sc2tv {
+        public static class sc2tv
+        {
             public static bool Active = false;
             public static string Channel = "";
             public static bool ColorNick = true;
@@ -267,7 +265,8 @@ namespace RutonyChat {
             public static string DonateLogin = "";
         }
 
-        public static class goodgame {
+        public static class goodgame
+        {
             public static bool Active = false;
             public static string Channel = "";
             public static bool ColorNick = true;
@@ -288,61 +287,82 @@ namespace RutonyChat {
             public static string CustomStreamKey = "";
         }
 
-        public static class Reall {
+        public static class Reall
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
 
-        public static class Welovegames {
+        public static class Welovegames
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
 
-        public static class VIDI {
+        public static class VIDI
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
 
-        public static class Beam {
+        public static class Beam
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
 
-        public static class StreamBox {
+        public static class StreamBox
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class streamcube {
+
+        public static class streamcube
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class cybergame {
+
+        public static class cybergame
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class gtv {
+
+        public static class gtv
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class aces {
+
+        public static class aces
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class douyu {
+
+        public static class douyu
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class azubu {
+
+        public static class azubu
+        {
             public static bool Active = false;
             public static string Channel = "";
             public static string Login = "";
             public static string Password = "";
         }
-        public static class gipsyteam {
+
+        public static class gipsyteam
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class youtube {
+
+        public static class youtube
+        {
             public static bool Active = false;
             public static string Token = "";
             public static string TokenSecret = "";
@@ -369,18 +389,24 @@ namespace RutonyChat {
             public static bool ColorNick = true;
             public static string Cookie = "";
         }
-        public static class smashcast {
+
+        public static class smashcast
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class odnoklassniki {
+
+        public static class odnoklassniki
+        {
             public static bool Active = false;
             public static string Channel = "";
             public static string Token = "";
             public static string TokenSecret = "";
             public static string RefreshToken = "";
         }
-        public static class vkontakte {
+
+        public static class vkontakte
+        {
             public static bool Active = false;
             public static string TypeConnect = "0";
             public static string Channel = "";
@@ -398,7 +424,9 @@ namespace RutonyChat {
             public static string SetTitle = "";
             public static string SetDesc = "";
         }
-        public static class facebook {
+
+        public static class facebook
+        {
             public static bool Active = false;
             public static string Channel = "";
             public static string GroupId = "";
@@ -408,85 +436,121 @@ namespace RutonyChat {
 
             public static string TypeConnect = "0";
         }
-        public static class panda {
+
+        public static class panda
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class looch {
+
+        public static class looch
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class twitter {
+
+        public static class twitter
+        {
             public static bool Active = false;
             public static string Channel = "";
             public static string Token = "";
             public static string TokenSecret = "";
             public static string tag = "#rutony";
         }
-        public static class StreamGun {
+
+        public static class StreamGun
+        {
             public static bool Active = false;
             public static string AccessToken = "";
         }
-        public static class DonationAlerts {
+
+        public static class DonationAlerts
+        {
             public static bool Active = false;
             public static string Token = "";
             public static string RefreshToken = "";
             public static string APIKey = "Ybax9r2vJp0eb6AvvP2z";
         }
-        public static class Discord {
+
+        public static class Discord
+        {
             public static bool Active = false;
             public static string Token = "";
             public static string RefreshToken = "";
         }
-        public static class Donatty {
+
+        public static class Donatty
+        {
             public static bool Active = false;
             public static string Token = "";
         }
-        public static class TwitchAlerts {
+
+        public static class TwitchAlerts
+        {
             public static bool Active = false;
             public static string Token = "";
         }
-        public static class StreamTip {
+
+        public static class StreamTip
+        {
             public static bool Active = false;
             public static string AccessToken = "";
             public static string ClientId = "";
         }
-        public static class itunes {
+
+        public static class itunes
+        {
             public static bool Active = false;
         }
-        public static class lastfm {
+
+        public static class lastfm
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
-        public static class spotify {
+
+        public static class spotify
+        {
             public static bool Active = false;
             public static string Token = "";
             public static string RefreshToken = "";
         }
-        public static class DonatePay {
+
+        public static class DonatePay
+        {
             public static bool Active = false;
             public static string AccessToken = "";
         }
-        public static class GameWisp {
+
+        public static class GameWisp
+        {
             public static bool ActiveSubs = false;
             public static bool ActiveDonate = false;
             public static string AccessToken = "";
             public static string RefreshToken = "";
         }
-        public static class CloudTips {
+
+        public static class CloudTips
+        {
             public static bool Active = false;
             public static string Token = "";
         }
-        public static class QIWI {
+
+        public static class QIWI
+        {
             public static bool Active = false;
             public static string Token = "";
             public static string TelNumber = "";
         }
-        public static class DonateStream {
+
+        public static class DonateStream
+        {
             public static bool Active = false;
             public static string Token = "";
         }
-        public static class mailboxalerts {
+
+        public static class mailboxalerts
+        {
             public static bool active = false;
             public static string Port = "995";
             public static string POP3Server = "pop.gmail.com";
@@ -498,16 +562,21 @@ namespace RutonyChat {
             public static bool PayPal = false;
             public static bool WebMoney = false;
         }
-        public static class hypesx {
+
+        public static class hypesx
+        {
             public static bool Active = false;
             public static string Channel = "";
         }
 
-        public static class destream {
+        public static class destream
+        {
             public static bool Active = false;
             public static string Token = "";
         }
-        public static class trovo {
+
+        public static class trovo
+        {
             public static bool Active = false;
             public static string Token = "";
             public static string RefreshToken = "";
@@ -520,22 +589,25 @@ namespace RutonyChat {
             public static bool NewViewers = false;
             public static bool Gifts = true;
         }
-        public static class wasd {
+
+        public static class wasd
+        {
             public static bool Active = false;
             public static string Channel = "";
 
             public static bool ShowStickers = true;
             public static int StickersSize = 1;
         }
-        public static class steam {
+
+        public static class steam
+        {
             public static bool Active = false;
             public static string ChannelID = "";
         }
-        public static class reps {
+
+        public static class reps
+        {
             public static bool Active = false;
         }
-
-
-
     }
 }

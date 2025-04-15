@@ -1,17 +1,19 @@
 ﻿using RutonyChat;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TestScripts {
-    public class TestMethods {
+namespace TestScripts
+{
+    public class TestMethods
+    {
+        public static Script _script;
 
-        public static Script _script;                
-
-        public static void NewMessage(string site, string name, string text, bool system = false, Dictionary<string, string> Params = null) {
-
+        public static void NewMessage(
+            string site,
+            string name,
+            string text,
+            bool system = false,
+            Dictionary<string, string> Params = null
+        )
+        {
             Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< MESSAGE [{site}] {name}: {text}");
@@ -21,8 +23,8 @@ namespace TestScripts {
             _script.NewMessageEx(site, name, text, system, Params);
         }
 
-        public static void NewFollower(string site, string name) {
-
+        public static void NewFollower(string site, string name)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: FOLLOWER [{site}] {name}");
@@ -30,11 +32,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "follower", "", name, "", 0f, "", 0);
-
         }
 
-        public static void NewAnySubscriber(string site, string name, int period = 12) {
-
+        public static void NewAnySubscriber(string site, string name, int period = 12)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: ANY SUBSCRIBER [{site}] {name} / {period}");
@@ -42,11 +43,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "any_subscriber", "", name, "", period, "", 0);
-
         }
 
-        public static void NewNewSubscriber(string site, string name) {
-
+        public static void NewNewSubscriber(string site, string name)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: NEW SUBSCRIBER [{site}] {name}");
@@ -54,11 +54,15 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "new_subscriber", "", name, "", 0f, "", 0);
-
         }
 
-        public static void NewResub(string site, string name, int period = 12, string text = "hello text") {
-
+        public static void NewResub(
+            string site,
+            string name,
+            int period = 12,
+            string text = "hello text"
+        )
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: RESUB [{site}] {name}: {text} / {period}");
@@ -66,10 +70,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "resub", "", name, text, period, "", 0);
-
         }
-        public static void NewHost(string site, string name, int qty = 12) {
 
+        public static void NewHost(string site, string name, int qty = 12)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: HOST [{site}] {name} / {qty}");
@@ -77,10 +81,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "host", "", name, "", qty, "", 0);
-
         }
-        public static void NewRaid(string site, string name, int qty = 12) {
 
+        public static void NewRaid(string site, string name, int qty = 12)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: RAID [{site}] {name} / {qty}");
@@ -88,10 +92,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "raid", "", name, "", qty, "", 0);
-
         }
-        public static void NewNewViewer(string site, string name) {
 
+        public static void NewNewViewer(string site, string name)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: NEW VIEWER [{site}] {name}");
@@ -99,10 +103,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "new_viewer", "", name, "", 0f, "", 0);
-
         }
-        public static void NewRepost(string site, string name) {
 
+        public static void NewRepost(string site, string name)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: REPOST [{site}] {name}");
@@ -110,10 +114,14 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "new_viewer", "", name, "", 0f, "", 0);
-
         }
-        public static void NewGift(string site, string donor = "test_donor", string name = "test_user") {
 
+        public static void NewGift(
+            string site,
+            string donor = "test_donor",
+            string name = "test_user"
+        )
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: GIFT [{site}] {donor} -> {name}");
@@ -121,10 +129,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "new_viewer", "", name, "", 0f, "", 0);
-
         }
-        public static void NewLike(string site, string name) {
 
+        public static void NewLike(string site, string name)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: LIKE [{site}] {name}");
@@ -132,10 +140,10 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "new_viewer", "", name, "", 0f, "", 0);
-
         }
-        public static void NewRankPromote(string site, string name) {
 
+        public static void NewRankPromote(string site, string name)
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: RANK PROMOTE [{site}] {name}");
@@ -143,10 +151,16 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "rank_promote", "", name, "", 0f, "", 0);
-
         }
-        public static void NewDonate(string site = "donationalerts", string name = "test_user", string text = "test text", float amount = 123.45f, string currency = "RUB") {
 
+        public static void NewDonate(
+            string site = "donationalerts",
+            string name = "test_user",
+            string text = "test text",
+            float amount = 123.45f,
+            string currency = "RUB"
+        )
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: DONATE [{site}] {name}: {text} / {currency}{amount}");
@@ -154,11 +168,14 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert(site, "donate", "", name, text, amount, currency, 0);
-
         }
 
-        public static void NewTwitchPoints(string name = "test_user", string text = "test text", int amount = 500) {
-
+        public static void NewTwitchPoints(
+            string name = "test_user",
+            string text = "test text",
+            int amount = 500
+        )
+        {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"<<< EVENT: TWITCH POINTS {name}: {text} / {amount}");
@@ -166,7 +183,6 @@ namespace TestScripts {
             Console.BackgroundColor = ConsoleColor.Black;
 
             _script.NewAlert("twitch", "TwitchPoints", "", name, text, amount, "", 0);
-
         }
     }
 }

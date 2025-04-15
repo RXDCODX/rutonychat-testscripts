@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace RutonyChat {
-    public static class RankControl {
-
-        public class RankCondition {
+﻿namespace RutonyChat
+{
+    public static class RankControl
+    {
+        public class RankCondition
+        {
             public int Id { get; set; }
             public int IndCondition { get; set; } = 0;
             public bool Active { get; set; } = false;
@@ -32,8 +31,8 @@ namespace RutonyChat {
 
         public static List<RankCondition> ListConditions;
 
-        public class ChatterRank {
-
+        public class ChatterRank
+        {
             public int Id { get; set; }
             public string Uid { get; set; } = "";
             public string Nickname { get; set; } = "";
@@ -54,32 +53,38 @@ namespace RutonyChat {
             public float DonateToCredits { get; set; } = 0;
             public bool RankProtect { get; set; } = false;
 
-            public static implicit operator ChatterRank(List<ChatterRank> v) {
-                if (v != null && v.Count > 0) {
+            public static implicit operator ChatterRank(List<ChatterRank> v)
+            {
+                if (v != null && v.Count > 0)
+                {
                     return v[0];
                 }
                 return null;
             }
         }
 
-        public static void Dispose() {
-            
+        public static void Dispose() { }
 
-        }
-
-        public static void Init() {
-
-        }
+        public static void Init() { }
 
         public static List<ChatterRank> ListChatters;
         public static List<ChatterRank> ListUpdateSQL;
 
-        public static ChatterRank CheckRank(string var_nickname, string var_displaynickname,
-            bool var_isMessage = false, bool var_isSubscribe = false, bool var_isDonate = false, bool var_isCredits = false, bool var_isTime = false,
-            float var_summDonate = 0, int var_credits = 0, int var_time = 0, bool var_isSub = false) {
-
+        public static ChatterRank CheckRank(
+            string var_nickname,
+            string var_displaynickname,
+            bool var_isMessage = false,
+            bool var_isSubscribe = false,
+            bool var_isDonate = false,
+            bool var_isCredits = false,
+            bool var_isTime = false,
+            float var_summDonate = 0,
+            int var_credits = 0,
+            int var_time = 0,
+            bool var_isSub = false
+        )
+        {
             return new ChatterRank();
         }
-
     }
 }
